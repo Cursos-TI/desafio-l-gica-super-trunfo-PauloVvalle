@@ -11,7 +11,7 @@ int main(){
     char estado2[5], cidade2[50], codigo_carta2[5];
     float area2, densidade_populacional2, pib2, populacao2, pib_per_capita2, super_trunfo2, densidade_populacional1_invertida2;
     // resultado
-    long int resultadoP, resultadoA, resultadoPIB, resultadoPontos, resultadoD, resultadoPIBPC, resultadoSUPER;
+    int resultadoP, resultadoA, resultadoPIB, resultadoPontos, resultadoD, resultadoPIBPC, resultadoSUPER;
 
     // entrada de dados carta 1
     printf("Digite o nome da cidade: \n");
