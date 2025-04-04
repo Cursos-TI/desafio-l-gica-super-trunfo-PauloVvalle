@@ -38,7 +38,7 @@ int main(){
     printf("Densidade populacional: %.2f habitantes/km²\n", densidade_populacional1_invertida1);
     super_trunfo1 = (float) populacao1 + area1 + pib1 + numero_pontos_turisticios1 + densidade_populacional1_invertida1 + pib_per_capita1;
 
-    // saida da carta 
+    // saida da carta 1
     printf("******************************************************\n");
     printf("carta: %d\n", carta_atual1);
     printf("carta: %s\n", codigo_carta1);
@@ -54,7 +54,7 @@ int main(){
     printf("******************************************************\n");
 
     printf("Agora crie sua nova carta!\n");
-
+    // entrada carta 2
     printf("Digite o nome da cidade: \n");
     scanf("%s", cidade2);
 
