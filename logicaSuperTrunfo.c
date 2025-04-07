@@ -72,7 +72,7 @@ int main(){
     //carta 2
     carta_atual2 = 2;
     strcpy(codigo_carta2, "B01");
-    strcpy(codigo_carta2, "B");
+    strcpy(estado2, "B");
     densidade_populacional2 =  populacao2 / area2;
     pib_per_capita2 = pib2 / populacao2;
     densidade_populacional1_invertida2 = (float) 1/densidade_populacional2;
