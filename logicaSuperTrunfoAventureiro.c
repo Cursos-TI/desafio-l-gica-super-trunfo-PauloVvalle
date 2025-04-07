@@ -74,6 +74,7 @@ int main()
     strcpy(codigo_carta1, "A01");      // usei strcpy para usar como string
     strcpy(estado1, "A");              // usei strcpy para usar como string
     strcpy(cidade1, "Rio de janeiro"); // usei strcpy para usar como string
+    nomeJogador[strcspn(nomeJogador, "\n")] = '\0'; // remove o '\n' do nome do jogador
     densidade_populacional1 = (float)populacao1 / area1;
     pib_per_capita1 = (float)pib1 / populacao1;
     densidade_populacional1_invertida1 = (float)1 / densidade_populacional1;
@@ -111,30 +112,30 @@ int main()
     printf("7 - Super trunfo\n");
     printf("******************************************************\n");
     scanf("%d", &escolhaJogador);
-
+    printf("******************************************************\n");
     // switch menu comparação computador
     switch (escolhaJogador)
     {
     case 1:
-        printf("%s - Escolheu População -", nomeJogador);
+        printf("%s - Escolheu População -\n", nomeJogador);
         break;
     case 2:
-        printf("%s -Escolheu Área -", nomeJogador);
+        printf("%s -Escolheu Área -\n", nomeJogador);
         break;
     case 3:
-        printf("%s -Escolheu PIB -", nomeJogador);
+        printf("%s -Escolheu PIB -\n", nomeJogador);
         break;
     case 4:
-        printf("%s -Escolheu Pontos turisticos -", nomeJogador);
+        printf("%s -Escolheu Pontos turisticos -\n", nomeJogador);
         break;
     case 5:
-        printf("%s -Escolheu Densidade populacional -", nomeJogador);
+        printf("%s -Escolheu Densidade populacional -\n", nomeJogador);
         break;
     case 6:
-        printf("%s -Escolheu PIB per capita -", nomeJogador);
+        printf("%s -Escolheu PIB per capita -\n", nomeJogador);
         break;
     case 7:
-        printf("%s -Escolheu Super trunfo -", nomeJogador);
+        printf("%s -Escolheu Super trunfo -\n", nomeJogador);
         break;
     default:
         printf("Opção inválida!\n");
@@ -260,7 +261,7 @@ int main()
         }
     };
     printf("*******************************************\n");
-    printf("Obrigado por jogar o meu jogo!\n");
+    printf("Obrigado %s por jogar o meu jogo!\n", nomeJogador);
     printf("*************** FIM DO JOGO *****************\n");
 
     return 0;
