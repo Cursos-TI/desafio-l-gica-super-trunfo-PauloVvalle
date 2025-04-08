@@ -154,7 +154,7 @@ int main()
     strcpy(cidade2, "São paulo");
     densidade_populacional2 = (float) populacao2 / area2;
     pib_per_capita2 = (float) pib2 / populacao2;
-    densidade_populacional1_invertida2 = (float)1 / densidade_populacional2;
+    densidade_populacional1_invertida2 = (float) / densidade_populacional2;
     super_trunfo2 = (float)populacao2 + area2 + pib2 + numero_pontos_turisticios2 + densidade_populacional1_invertida2 + pib_per_capita2;
 
     // saida da carta 2
