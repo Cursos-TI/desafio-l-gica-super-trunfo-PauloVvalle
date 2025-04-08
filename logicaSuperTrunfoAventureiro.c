@@ -13,8 +13,6 @@ int main()
     int numero_pontos_turisticios2, carta_atual2;
     char estado2[5], cidade2[50], codigo_carta2[5];
     float area2, densidade_populacional2, pib2, populacao2, pib_per_capita2, super_trunfo2, densidade_populacional1_invertida2;
-    // resultado
-    int resultadoP, resultadoA, resultadoPIB, resultadoPontos, resultadoD, resultadoPIBPC, resultadoSUPER;
     // random
     srand(time(0));
     populacao1 = rand() % 1000000 + 1;
@@ -154,7 +152,7 @@ int main()
     strcpy(cidade2, "São paulo");
     densidade_populacional2 = (float) populacao2 / area2;
     pib_per_capita2 = (float) pib2 / populacao2;
-    densidade_populacional1_invertida2 = (float) / densidade_populacional2;
+    densidade_populacional1_invertida2 = (float) 1 / densidade_populacional2;
     super_trunfo2 = (float)populacao2 + area2 + pib2 + numero_pontos_turisticios2 + densidade_populacional1_invertida2 + pib_per_capita2;
 
     // saida da carta 2
@@ -178,86 +176,102 @@ int main()
         if (populacao1 > populacao2) {
             printf("Carta 1 ganhou em população\n");
             printf("O atributo escolhido foi: população\n");
-            printf("O valor da população: %.0f\n", populacao1);
+            printf("O valor da população carta 1: %.0f\n", populacao1);
         } else if (populacao1 < populacao2) {
             printf("Carta 2 ganhou em população\n");
             printf("O atributo escolhido foi: população\n");
-            printf("O valor da população: %.0f\n", populacao2);
+            printf("O valor da população carta 2: %.0f\n", populacao2);
         } else {
             printf("Empate em população\n");
+            printf("O valor da população carta 1: %.0f\n", populacao1);
+            printf("O valor da população carta 2: %.0f\n", populacao2);
         }
     } else if (escolhaJogador == 2) {
         if (area1 > area2) {
             printf("Carta 1 ganhou em área\n");
             printf("O atributo escolhido foi: área\n");
-            printf("O valor da área: %.2f km²\n", area1);
+            printf("O valor da área carta 1: %.2f km²\n", area1);
         } else if (area1 < area2) {
             printf("Carta 2 ganhou em área\n");
             printf("O atributo escolhido foi: área\n");
-            printf("O valor da área: %.2f km²\n", area2);
+            printf("O valor da área carta 2: %.2f km²\n", area2);
         } else {
             printf("Empate em área\n");
+            printf("O valor da área carta 1: %.2f km²\n", area1);
+            printf("O valor da área carta 2: %.2f km²\n", area2);
         }
     } else if (escolhaJogador == 3) {
         if (pib1 > pib2) {
             printf("Carta 1 ganhou em PIB\n");
             printf("O atributo escolhido foi: PIB\n");
-            printf("O valor do PIB: %.2f $\n", pib1);
+            printf("O valor do PIB carta 1: %.2f $\n", pib1);
         } else if (pib1 < pib2) {
             printf("Carta 2 ganhou em PIB\n");
             printf("O atributo escolhido foi: PIB\n");
-            printf("O valor do PIB: %.2f $\n", pib2);
+            printf("O valor do PIB carta 2: %.2f $\n", pib2);
         } else {
             printf("Empate em PIB\n");
+            printf("O valor do PIB carta 1: %.2f $\n", pib1);
+            printf("O valor do PIB carta 2: %.2f $\n", pib2);
         }
     } else if (escolhaJogador == 4) {
         if (numero_pontos_turisticios1 > numero_pontos_turisticios2) {
             printf("Carta 1 ganhou em pontos turisticos\n");
             printf("O atributo escolhido foi: pontos turisticos\n");
-            printf("O valor dos pontos turisticos: %d\n", numero_pontos_turisticios1);
+            printf("O valor dos pontos turisticos carta 1: %d\n", numero_pontos_turisticios1);
         } else if (numero_pontos_turisticios1 < numero_pontos_turisticios2) {
             printf("Carta 2 ganhou em pontos turisticos\n");
             printf("O atributo escolhido foi: pontos turisticos\n");
-            printf("O valor dos pontos turisticos: %d\n", numero_pontos_turisticios2);
+            printf("O valor dos pontos turisticos carta 2: %d\n", numero_pontos_turisticios2);
         } else {
             printf("Empate em pontos turisticos\n");
+            printf("O valor dos pontos turisticos carta 1: %d\n", numero_pontos_turisticios1);
+            printf("O valor dos pontos turisticos carta 2: %d\n", numero_pontos_turisticios2);
         }
     } else if (escolhaJogador == 5) {
         if (densidade_populacional1 < densidade_populacional2) {
             printf("Carta 1 ganhou em densidade populacional\n");
             printf("O atributo escolhido foi: densidade populacional\n");
-            printf("O valor da densidade populacional: %.0f habitantes/km²\n", densidade_populacional1);
+            printf("O valor da densidade populacional carta 1: %.0f habitantes/km²\n", densidade_populacional1);
         } else if (densidade_populacional1 > densidade_populacional2) {
             printf("Carta 2 ganhou em densidade populacional\n");
             printf("O atributo escolhido foi: densidade populacional\n");
-            printf("O valor da densidade populacional: %.0f habitantes/km²\n", densidade_populacional2);
+            printf("O valor da densidade populacional carta 2: %.0f habitantes/km²\n", densidade_populacional2);
         } else {
             printf("Empate em densidade populacional\n");
+            printf("O valor da densidade populacional carta 1: %.0f habitantes/km²\n", densidade_populacional1);
+            printf("O valor da densidade populacional carta 2: %.0f habitantes/km²\n", densidade_populacional2);
         }
     } else if (escolhaJogador == 6) {
         if (pib_per_capita1 > pib_per_capita2) {
             printf("Carta 1 ganhou em PIB per capita\n");
             printf("O atributo escolhido foi: PIB per capita\n");
-            printf("O valor do PIB per capita: %.2f $\n", pib_per_capita1);
+            printf("O valor do PIB per capita carta 1: %.2f $\n", pib_per_capita1);
         } else if (pib_per_capita1 < pib_per_capita2) {
             printf("Carta 2 ganhou em PIB per capita\n");
             printf("O atributo escolhido foi: PIB per capita\n");
-            printf("O valor do PIB per capita: %.2f $\n", pib_per_capita2);
+            printf("O valor do PIB per capita carta 2: %.2f $\n", pib_per_capita2);
         } else {
             printf("Empate em PIB per capita\n");
+            printf("O atributo escolhido foi: PIB per capita\n");
+            printf("O valor do PIB per capita carta 1: %.2f $\n", pib_per_capita1);
+            printf("O valor do PIB per capita carta 2: %.2f $\n", pib_per_capita2);
         }
     } else if (escolhaJogador == 7) {
         if (super_trunfo1 > super_trunfo2) {
             printf("Carta 1 ganhou em super trunfo\n");
             printf("O atributo escolhido foi: super trunfo\n");
-            printf("O valor do super trunfo: %.2f\n", super_trunfo1);
+            printf("O valor do super trunfo carta 1: %.2f\n", super_trunfo1);
         } else if (super_trunfo1 <
             super_trunfo2) {
             printf("Carta 2 ganhou em super trunfo\n");
             printf("O atributo escolhido foi: super trunfo\n");
-            printf("O valor do super trunfo: %.2f\n", super_trunfo2);
+            printf("O valor do super trunfo carta 2: %.2f\n", super_trunfo2);
         } else {
             printf("Empate em super trunfo\n");
+            printf("O atributo escolhido foi: super trunfo\n");
+            printf("O valor do super trunfo carta 1: %.2f\n", super_trunfo1);
+            printf("O valor do super trunfo carta 2: %.2f\n", super_trunfo2);
         }
     };
     printf("*******************************************\n");
